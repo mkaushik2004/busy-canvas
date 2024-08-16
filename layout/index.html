@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busy Canvas</title>
+    <link rel="icon" href="../assets/img/logo/1.jpg" />
+    <link rel="stylesheet" href="../assets/css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+    <script src="../assets/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="col-lg-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/img/logo/1.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"/>
+                        Busy Canvas
+                    </a>
+                </div>
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#gal">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#price">Pricing</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../assets/img/header/profile.png" alt="profile" height="30" width="30">
+                                </a>
+                                <ul class="dropdown-menu" id="profileDropdown">
+                                    <li><a class="dropdown-item" href="../layout/login.html">Login</a></li>
+                                    <li><a class="dropdown-item" href="../layout/signup.html">Register</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero page -->
+    <div class="hero">
+        <h1 class="h-title">Welcome to <span>BUSY CANVAS</span></h1>
+        <h4 class="h-sub-title">Gift my art to your heart</h4>
+        <div class="h-img">
+            <img src="../assets/img/logo/1.jpg" alt="loading..."> 
+        </div>
+    </div>
+    <!-- /hero page -->
+
+    <br><br>
+
+    <!-- about page -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-6 content aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <p class="who-we-are">Who We Are</p>
+                    <h3>Every Canvas Is A Journey Of All Its Own</h3>
+                    <p class="fst-italic">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
+                        <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+                        <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 about-images aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+                        <div class="col-lg-6">
+                            <img src="../assets/img/about/1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row gy-4">
+                                <div class="col-lg-12">
+                                    <img src="../assets/img/about/2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-lg-12">
+                                    <img src="../assets/img/about/3.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /about page -->
+
+    <br><br>
+
+    <!-- services page -->
+    <div class="container-sec" id="services">
+        <div class="section">
+            <img src="../assets/img/banner/1.jpg" alt="Sketching">
+            <div class="overlay">
+                <button onclick="window.location.href='#gal'"> < Sketching </button>
+            </div>
+        </div>
+        <div class="section">
+            <img src="../assets/img/banner/2.jpg" alt="Training">
+            <div class="overlay">
+                <button onclick="window.location.href='../layout/class-form.html'">Training ></button>
+            </div>
+        </div>
+    </div>
+    <!-- /services page -->
+
+    <br>
+
+    <!-- gallery -->
+    <div class="gal" id="gal">
+        <div class="title">
+            <br><br>
+            <button class="title-btn">ART GALLERY</button>
+        </div>
+        <br><br>
+        <div class="gallery">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+        </div>
+        <br><br><br>
+        <div class="title">
+            <a href="" class="down-btn">Make a art for your Loved ones</a>
+        </div>
+    </div>
+    <!-- /gallery -->
+
+    <br><br>
+
+    <!-- Pricing -->
+
+    <section class="pricing-table" id="price">
+        <div class="card">
+          <h6 class="type">Black & White-potrait</h6>
+          <div class="price"><span>₹</span>2000</div>
+          <ul class="details">
+            <li>water proof</li>
+            <li>FREE Delivery</li>
+            <li>24/7 support</li>
+          </ul>
+          <div class="buy-button">
+            <a class="btn" href="../layout/order-form.html">Purchase</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <h6 class="type">Color-potrait</h6>
+          <div class="price"><span>₹</span>2500</div>
+          <ul class="details">
+            <li>FREE Stickers</li>
+            <li>FREE Delivery</li>
+            <li>24/7 support</li>
+          </ul>
+          <div class="buy-button">
+            <a class="btn" href="../layout/order-form.html">Purchase</a>
+          </div>
+        </div>
+      
+        <div class="card">
+          <h6 class="type">premium</h6>
+          <div class="price"><span>₹</span>3000</div>
+          <ul class="details">
+            <li>FREE Stickers</li>
+            <li>FREE Delivery</li>
+            <li>24/7 support</li>
+          </ul>
+          <div class="buy-button">
+            <a class="btn" href="../layout/order-form.html">Purchase</a>
+          </div>
+        </div>
+      </section>
+      <style>
+
+      </style>
+    <!-- /Pricing -->
+    
+    <br><br>    
+
+</body>
+</html>

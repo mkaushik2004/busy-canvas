@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busy Canvas-Form</title>
+    <link rel="icon" href="../assets/img/logo/1.jpg" />
+    <link rel="stylesheet" href="../assets/css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/css/order-form.css"/>
+</head>
+
+<section class="frame-size">
+  <br><br>
+    <div class="form-card">
+        <h2>Order Your Photo Frame</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@gmail.com" required>
+        </div>
+          <!-- Photo Upload -->
+          <div class="form-group">
+            <label for="photo">Upload Your Photo</label>
+            <br>
+            <input class="form-control" type="file" id="formFileMultiple" multiple required>
+           
+            <img id="preview" src="" alt="Photo Preview" style="display:none;">
+          </div>
+    
+          <!-- Frame Details
+          <div class="form-group">
+            <label for="frameSize">Frame Size (in inches)</label>
+            <input type="text" class="form-control" id="frameSize" name="frameSize" placeholder="e.g., 24x36" required>
+          </div> -->
+
+          <div class="form-group">
+            <label for="frameSize">Frame Size (in inches)</label>
+            <div class="select-wrapper">
+                <select class="form-control" id="frameColor" name="frameColor" required>
+                <option value="">Select Size</option>
+                <option value="small">Small - 5x7 inches (13x18 cm)</option>
+                <option value="medium">Medium - 11x14 inches (28x36 cm)</option>
+                <option value="large">Large - 20x24 inches (51x61 cm)</option>
+                <option value="xlarge">extra-Large - 30x40 inches (76x102 cm)</option>
+                </select>
+                <span class="custom-arrow">▼</span>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="frameColor">Frame Color</label>
+            <div class="select-wrapper">
+                <select class="form-control" id="frameColor" name="frameColor" required>
+                <option value="">Select Color</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+                <option value="wood">Wood</option>
+                <option value="silver">Silver</option>
+                </select>
+                <span class="custom-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="matColor">Mat Color</label>
+            <div class="select-wrapper">
+                <select class="form-control" id="matColor" name="matColor">
+                    <option value="">Select Color (Optional)</option>
+                    <option value="white">White</option>
+                    <option value="cream">Cream</option>
+                    <option value="black">Black</option>
+                    <option value="gray">Gray</option>
+                </select>
+                <span class="custom-arrow">▼</span>
+            </div>
+        </div>
+    
+          <div class="form-group">
+            <label for="specialInstructions">Special Instructions</label>
+            <textarea class="form-control" id="specialInstructions" name="specialInstructions" rows="4" placeholder="Any additional details or requests"></textarea>
+          </div>
+    
+          <button type="submit" class="btn btn-custom ">Submit Order</button>
+        </form>
+      </div>
+      <br><br>
+    
+</section>

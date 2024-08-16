@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Online Session</title>
+    <link rel="icon" href="../assets/img/logo/1.jpg" />
+    <link rel="stylesheet" href="../assets/css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../assets/css/class-form.css"/>
+</head>
+
+
+<section class="frame-size">
+    <br><br>
+    <div class="form-card">
+        <h2>Book Your Online Session</h2>
+        <form action="#" method="post">
+
+        <div class="form-group">
+            <label class="bold" for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@gmail.com" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="sessionDate">Preferred Date</label>
+            <input type="date" class="form-control" id="sessionDate" name="sessionDate" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="sessionTime">Preferred Time</label>
+            <input type="time" class="form-control" id="sessionTime" name="sessionTime" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="sessionType">Session Type</label>
+            <div class="select-wrapper">
+                <select class="form-control" id="sessionType" name="sessionType" required>
+                    <option value="">Select Session Type</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="tutorial">Tutorial</option>
+                    <option value="workshop">Workshop</option>
+                </select>
+                <span class="custom-arrow">▼</span>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea class="form-control" id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or additional details"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-custom">Book Session</button>
+        </form>
+    </div>
+    <br><br>
+</section>

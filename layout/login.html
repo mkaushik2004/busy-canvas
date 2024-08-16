@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busy Canvas Login </title>
+    <link rel="icon" href="../assets/img/logo/1.jpg">
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <script src="../assets/js/login-verify.js"></script>
+
+</head>
+
+<body>
+
+    <div class="login">        
+        <div class="login-screen">
+            <div class="pic">
+                <img class="image" src="../assets/img/logo/1.jpg" alt="loading...">
+            </div>
+
+            <div class="app-title">
+                <h1 style=color:white;>LOGIN</h1>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                <input type="text" class="login-field" value="" placeholder="username" id="login-name">
+                <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+
+                <div class="control-group">
+                <input type="password" class="login-field" value="" placeholder="password" id="login-pass">
+                <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+
+                <a onclick="return verify()" class="btn btn-primary btn-large btn-block" href="index.html">Login</a>
+                <a class="login-link" href="#">Lost your password?</a>
+                <a  href="signup.html">New here!-Let'create one for you</a>
+            </div>
+    
+    </div>
+</body>
+</html>

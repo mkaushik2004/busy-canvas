@@ -1,0 +1,109 @@
+<style>
+
+    .display
+    {
+        text-align: center;
+        background-image: url(../assets/img/background/3.png);
+        background-position: center;
+        background-size:cover;
+        color: rgb(36, 36, 36);
+        font-family:'Arial Narrow Bold';
+        height: 100%;
+    }
+
+    .display::before
+    {
+        opacity: 0.4;
+    }
+
+    .forms
+    {
+        text-align: center;
+        border: 5px solid black;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    label
+    {
+        font-size: 20;
+    }
+
+    .btns
+    {
+        background-color: #f8c542;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 10px 20px;
+
+    }
+    .btnr
+    {
+        background-color: #fe4444;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+
+    .container
+    {
+        background-color:rgb(119, 105, 102);
+        height: auto;
+        width: 8cm;
+        padding: 5px;
+        margin-left:40%;
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: 5px 5px 8px 8px black;
+    }
+
+</style>
+
+
+<div class="display">
+    <br>
+    <div class="container">
+
+        <h1>Present Your Portrait</h1>
+        
+        
+        <form action="dummy.html">
+            <input type="text" placeholder="Name" class="forms">
+            <br><br>
+            <input type="tel" placeholder="Contact" class="forms">
+            <br><br>
+            <input type="email" placeholder="Email" class="forms">
+            <br><br>
+            <div style="display: inline-block;">
+                <label for="" style="font-weight: bold;"><u>Style</u></label>
+                <br>
+                <input type="radio" name="style" id="b&w" value="b&w">
+                <label for="b&w">Black and White</label>
+                <input type="radio" name="style" id="color" value="color">
+                <label for="color">Color</label>
+            </div>
+            <br><br>
+            
+            <label for="Size">Potrait Size : </label>
+            <select name="Size" id="Size">
+                <option value="">Select Size</option>
+                <option value="">Potrait A4</option>
+                <option value="">Potrait A3</option>
+                <option value="">Landscape A4</option>
+                <option value="">Landscape A3</option>
+            </select>
+            <br><br>
+            <label for="file">Upload the Photo : </label>
+            <input type="file" id="myFile" name="filename">
+            <br><br>
+            <textarea name="message" rows="5" cols="30" placeholder="Suggestions..."></textarea>
+            <br><br>
+            <button type="submit" class="btns">Submit</button>
+            <button type="reset" class="btnr">Reset</button>
+
+        
+        </form>
+    </div>
+</div>

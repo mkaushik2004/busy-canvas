@@ -63,8 +63,39 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// Admin credentials
+const ADMIN_USERNAME = 'admin';
+const ADMIN_PASSWORD = '123456';
+
+// Check if credentials are admin
+function isAdminLogin(username, password) {
+    return username === ADMIN_USERNAME && password === ADMIN_PASSWORD;
+}
+
+// Handle admin login
+function handleAdminLogin() {
+    // Set authentication flag
+    sessionStorage.setItem('adminAuthenticated', 'true');
+    sessionStorage.setItem('adminLoginTime', new Date().toISOString());
+    
+    showSuccess('Admin login successful! Redirecting to admin dashboard...');
+    
+    // Redirect to admin page after short delay
+    setTimeout(() => {
+        window.location.href = 'admin.html';
+    }, 1500);
+    
+    return true;
+}
+
 // Login function
-async function login(email, password) {
+async function login(emailOrUsername, password) {
+    // Check if it's admin login first
+    if (isAdminLogin(emailOrUsername, password)) {
+        return handleAdminLogin();
+    }
+    
+    // Regular user login
     try {
         const response = await fetch(`${API_BASE_URL}/auth/login`, {
             method: 'POST',
@@ -72,7 +103,7 @@ async function login(email, password) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email: email,
+                email: emailOrUsername,
                 password: password
             })
         });
@@ -109,7 +140,7 @@ async function verify(event) {
     const passwordInput = document.getElementById('login-pass');
     const submitButton = document.querySelector('.login-btn');
     
-    const email = emailInput.value.trim();
+    const emailOrUsername = emailInput.value.trim();
     const password = passwordInput.value.trim();
     
     // Clear previous alerts
@@ -117,12 +148,25 @@ async function verify(event) {
     alerts.forEach(alert => alert.remove());
     
     // Validation
-    if (!email || !password) {
-        showError('Please enter both email and password');
+    if (!emailOrUsername || !password) {
+        showError('Please enter both username/email and password');
         return false;
     }
     
-    if (!isValidEmail(email)) {
+    // Check if it's admin login (skip email validation for admin)
+    if (isAdminLogin(emailOrUsername, password)) {
+        try {
+            showLoading(submitButton);
+            await login(emailOrUsername, password);
+        } catch (error) {
+            hideLoading(submitButton);
+            showError(error.message || 'Login failed. Please try again.');
+        }
+        return false;
+    }
+    
+    // Regular user validation
+    if (!isValidEmail(emailOrUsername)) {
         showError('Please enter a valid email address');
         return false;
     }
@@ -134,7 +178,7 @@ async function verify(event) {
     
     try {
         showLoading(submitButton);
-        await login(email, password);
+        await login(emailOrUsername, password);
     } catch (error) {
         hideLoading(submitButton);
         showError(error.message || 'Login failed. Please try again.');
@@ -147,9 +191,16 @@ async function verify(event) {
 function checkAuthStatus() {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
+    const adminAuthenticated = sessionStorage.getItem('adminAuthenticated');
     
+    // If admin is already logged in, redirect to admin page
+    if (adminAuthenticated === 'true') {
+        window.location.href = 'admin.html';
+        return;
+    }
+    
+    // If regular user is already logged in, redirect to dashboard
     if (token && user) {
-        // User is already logged in, redirect to dashboard
         window.location.href = '../layout/index.html';
     }
 }
